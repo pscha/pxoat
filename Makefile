@@ -3,14 +3,14 @@ LDADD?=`pkg-config --cflags --libs x11 xinerama xft`
 
 
 normal:
-	$(CC) -o xoat xoat.c $(CFLAGS) $(LDADD) $(LDFLAGS)
-	$(CC) -o xoat-debug xoat.c $(CFLAGS) -g $(LDADD) $(LDFLAGS)
+	$(CC) -o pxoat xoat.c $(CFLAGS) $(LDADD) $(LDFLAGS)
+	$(CC) -o pxoat-debug xoat.c $(CFLAGS) -g $(LDADD) $(LDFLAGS)
 	strip xoat
 
 install:
 	make
-	sudo cp -f xoat /usr/local/bin
-	xoat restart
+	sudo cp -f pxoat /usr/local/bin
+	pxoat restart
 
 docs:
 	pandoc -s -w man xoat.md -o xoat.1

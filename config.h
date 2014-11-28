@@ -4,7 +4,7 @@
 #define BORDER_BLUR "#222222" //Dark Grey
 #define BORDER_FOCUS "#ff2222"
 #define BORDER_URGENT "#444444"
-#define GAP  10
+#define GAP  20
 
 // Title bar xft font.
 // Setting this to NULL will disable title bars

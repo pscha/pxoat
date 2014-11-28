@@ -219,19 +219,20 @@ void client_place_spot(client *c, int spot, int mon, int force)
 	// _NET_WM_STATE_MAXIMIZE_VERT may apply to a window in spot2
 	if (c->maxv && spot == SPOT2)
 	{
-		h = m->h - (y - m->y);
+		h = m->h - (y - m->y) - GAP;
 	}
 	else
 	// _NET_WM_STATE_MAXIMIZE_HORZ may apply to a window in spot3
 	if (c->maxh && spot == SPOT3)
 	{
-		w = m->w;
+		w = m->w - GAP * 2;
+		x = m->x + GAP;
 	}
 	else
 	if (c->max && spot == SPOT1)
 	{
-		h = m->h - (y - m->y);
-		w = m->w;
+		h = m->h - (y - m->y)-GAP;
+		w = m->w -GAP*2;
 	}
 
 	w -= BORDER*2; h -= BORDER*2;

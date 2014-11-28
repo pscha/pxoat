@@ -142,8 +142,8 @@ void setup()
 		{
 			m->spots[j].x = spot1_align == LEFT ? x + GAP: x + w - width_spot1 + GAP;
 			m->spots[j].y = y + GAP;
-			m->spots[j].w = width_spot1 - GAP*2;
-			m->spots[j].h = h -GAP*2;
+			m->spots[j].w = width_spot1 - GAP * 2;
+			m->spots[j].h = h - GAP * 2;
 			if (j == SPOT1) continue;
 
 			m->spots[j].x = spot1_align == LEFT ? x + width_spot1 : x;
