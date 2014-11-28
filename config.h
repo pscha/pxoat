@@ -1,8 +1,8 @@
 // xoat config.
 
-#define BORDER 1
-#define BORDER_BLUR "#000000" //Dark Grey
-#define BORDER_FOCUS "#555555"
+#define BORDER 4
+#define BORDER_BLUR "#222222" //Dark Grey
+#define BORDER_FOCUS "#ff2222"
 #define BORDER_URGENT "#444444"
 #define GAP  10
 
