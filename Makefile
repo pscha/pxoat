@@ -2,14 +2,13 @@ CFLAGS?=-Wall -Os -std=c99
 LDADD?=`pkg-config --cflags --libs x11 xinerama xft`
 
 
-normal:
-	$(CC) -o pxoat xoat.c $(CFLAGS) $(LDADD) $(LDFLAGS)
+normal: config.h  
+	$(CC) -o pxoat xoat.c $(CFLAGS) $(LDADD) $(LDFLAGS) 
 	$(CC) -o pxoat-debug xoat.c $(CFLAGS) -g $(LDADD) $(LDFLAGS)
-	strip xoat
+	strip pxoat
 
 install:
-	make
-	sudo cp -f pxoat /usr/local/bin
+	cp -f pxoat /usr/local/bin
 	pxoat restart
 
 docs:
