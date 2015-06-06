@@ -1,10 +1,10 @@
 // xoat config.
 
-#define BORDER 4
+#define BORDER 1 
 #define BORDER_BLUR "#222222" //Dark Grey
-#define BORDER_FOCUS "#ff2222"
-#define BORDER_URGENT "#444444"
-#define GAP  20
+#define BORDER_FOCUS "#ffffff"
+#define BORDER_URGENT "#4c4c4c"
+#define GAP 5
 
 // Title bar xft font.
 // Setting this to NULL will disable title bars
@@ -46,7 +46,8 @@
 
 layout layouts[] = {
 	// Look at xrandr output to determine your monitor order.
-	{ .spot_start = CURRENT, .spot1_align = LEFT,  .spot1_width_pct = 60, .spot2_height_pct = 60 }, // primary monitor66//{ .spot_start = SMART, .spot1_align = RIGHT, .spot1_width_pct = 60, .spot2_height_pct = 66 }, // secondary monitor, etc...
+	{ .spot_start = CURRENT, .spot1_align = LEFT,  .spot1_width_pct = 60,
+	.spot2_height_pct = 54 }, // primary monitor66//{ .spot_start = SMART, .spot1_align = RIGHT, .spot1_width_pct = 60, .spot2_height_pct = 66 }, // secondary monitor, etc...
 };
 
 // Available actions...
@@ -68,16 +69,16 @@ layout layouts[] = {
 binding keys[] = {
 
 	// Change focus to a spot by direction.
-	{ .mod = Mod4Mask, .key = XK_Left,  .act = action_focus_direction, .num = LEFT  },
-	{ .mod = Mod4Mask, .key = XK_Up,    .act = action_focus_direction, .num = UP    },
-	{ .mod = Mod4Mask, .key = XK_Right, .act = action_focus_direction, .num = RIGHT },
-	{ .mod = Mod4Mask, .key = XK_Down,  .act = action_focus_direction, .num = DOWN  },
+	{ .mod = Mod4Mask, .key = XK_h,  .act = action_focus_direction, .num = LEFT  },
+	{ .mod = Mod4Mask, .key = XK_k,    .act = action_focus_direction, .num = UP    },
+	{ .mod = Mod4Mask, .key = XK_l, .act = action_focus_direction, .num = RIGHT },
+	{ .mod = Mod4Mask, .key = XK_j,  .act = action_focus_direction, .num = DOWN  },
 
 	// Move the current window to another spot by direction.
-	{ .mod = ShiftMask|Mod4Mask, .key = XK_Left,  .act = action_move_direction, .num = LEFT  },
-	{ .mod = ShiftMask|Mod4Mask, .key = XK_Up,    .act = action_move_direction, .num = UP    },
-	{ .mod = ShiftMask|Mod4Mask, .key = XK_Right, .act = action_move_direction, .num = RIGHT },
-	{ .mod = ShiftMask|Mod4Mask, .key = XK_Down,  .act = action_move_direction, .num = DOWN  },
+	{ .mod = ShiftMask|Mod4Mask, .key = XK_h,  .act = action_move_direction, .num = LEFT  },
+	{ .mod = ShiftMask|Mod4Mask, .key = XK_k,    .act = action_move_direction, .num = UP    },
+	{ .mod = ShiftMask|Mod4Mask, .key = XK_l, .act = action_move_direction, .num = RIGHT },
+	{ .mod = ShiftMask|Mod4Mask, .key = XK_j,  .act = action_move_direction, .num = DOWN  },
 
 	// Flip between the top two windows in the current spot.
 	//{ .mod = Mod4Mask, .key = XK_Tab, .act = action_raise_nth, .num = 1 },
@@ -102,7 +103,7 @@ binding keys[] = {
 	// Toggle current window full screen.
 	{ .mod = Mod4Mask, .key = XK_f, .act = action_fullscreen },
 	{ .mod = Mod4Mask, .key = XK_v, .act = action_maximize_vert },
-	{ .mod = Mod4Mask, .key = XK_h, .act = action_maximize_horz },
+	{ .mod = Mod4Mask, .key = XK_n, .act = action_maximize_horz },
 	{ .mod = Mod4Mask, .key = XK_m, .act = action_maximize },
 
 	// Switch focus between monitors.
