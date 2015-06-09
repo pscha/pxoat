@@ -4,7 +4,7 @@
 #define BORDER_BLUR "#222222" //Dark Grey
 #define BORDER_FOCUS "#ffffff"
 #define BORDER_URGENT "#4c4c4c"
-#define GAP 5
+#define GAP 0
 
 // Title bar xft font.
 // Setting this to NULL will disable title bars
@@ -47,7 +47,7 @@
 layout layouts[] = {
 	// Look at xrandr output to determine your monitor order.
 	{ .spot_start = CURRENT, .spot1_align = LEFT,  .spot1_width_pct = 60,
-	.spot2_height_pct = 54 }, // primary monitor66//{ .spot_start = SMART, .spot1_align = RIGHT, .spot1_width_pct = 60, .spot2_height_pct = 66 }, // secondary monitor, etc...
+	.spot2_height_pct = 60 }, // primary monitor66//{ .spot_start = SMART, .spot1_align = RIGHT, .spot1_width_pct = 60, .spot2_height_pct = 66 }, // secondary monitor, etc...
 };
 
 // Available actions...
