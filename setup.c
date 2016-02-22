@@ -167,7 +167,7 @@ void setup()
 	SETPROP_WIND(root, atoms[_NET_SUPPORTING_WM_CHECK], &ewmh,     1);
 	SETPROP_LONG(ewmh, atoms[_NET_WM_PID],              &pid,      1);
 
-	XChangeProperty(display, ewmh, atoms[_NET_WM_NAME], XA_STRING, 8, PropModeReplace, (const unsigned char*)"xoat", 4);
+	XChangeProperty(display, ewmh, atoms[_NET_WM_NAME], XA_STRING, 8, PropModeReplace, (const unsigned char*)"pxoat", 5);//xoat
 
 	// figure out NumlockMask
 	XModifierKeymap *modmap = XGetModifierMapping(display);
