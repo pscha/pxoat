@@ -1,12 +1,12 @@
-% XOAT(1)
+% PXOAT(1)
 
 # NAME
 
-xoat \- X11 Obstinate Asymmetric Tiler
+pxoat \- X11 Obstinate Asymmetric Tiler
 
 # SYNOPSIS
 
-**xoat** [restart] [exit]
+**pxoat** [restart] [exit]
 
 # DESCRIPTION
 
@@ -75,12 +75,12 @@ Mod4+Return
 
 All configuration is done via config.h.
 
-The xoat binary may be used to send messages to a running instance of xoat. They include:
+The pxoat binary may be used to send messages to a running instance of xoat. They include:
 
-xoat exit
+pxoat exit
 :	Exit the window manager.
 
-xoat restart
+pxoat restart
 :	Restart the window manager in place without affecting the X session.
 
 # SEE ALSO
@@ -89,4 +89,5 @@ xoat restart
 
 # AUTHOR
 
+Sascha Martensen <martensensascha@gmail.com>
 Sean Pringle <sean.pringle@gmail.com>
